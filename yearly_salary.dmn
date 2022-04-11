@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_7C0A3AC7-C2FA-4C5F-94DE-BC82BA25DF82" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_1EF500B1-167A-409A-9605-2B95B161E9AD" name="yearly_salary" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_7C0A3AC7-C2FA-4C5F-94DE-BC82BA25DF82">
+  <dmn:extensionElements/>
+  <dmn:inputData id="_2CC9D642-9A1D-44A4-A668-08480A23EF5B" name="monthly_salary">
+    <dmn:extensionElements/>
+    <dmn:variable id="_BC54DBDB-86BA-4A2B-B32D-C6C926A40725" name="monthly_salary" typeRef="number"/>
+  </dmn:inputData>
+  <dmn:decision id="_7334953C-8C45-4E2D-8989-7BDC93B9ED70" name="Yearly_salary">
+    <dmn:extensionElements/>
+    <dmn:variable id="_529DEFC7-0816-4613-B990-BA9901A63AC2" name="Yearly_salary" typeRef="number"/>
+    <dmn:informationRequirement id="_C37D0682-8B31-4EF5-92F9-2ED125C740B1">
+      <dmn:requiredInput href="#_2CC9D642-9A1D-44A4-A668-08480A23EF5B"/>
+    </dmn:informationRequirement>
+    <dmn:literalExpression id="_706B6E68-65C5-43DB-9A6E-08C2449A13A4">
+      <dmn:text>12*monthly_salary</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_1E712653-3A95-4F08-8787-B0CCD1CDBC2A" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_706B6E68-65C5-43DB-9A6E-08C2449A13A4">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_2CC9D642-9A1D-44A4-A668-08480A23EF5B" dmnElementRef="_2CC9D642-9A1D-44A4-A668-08480A23EF5B" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="428" y="280" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_7334953C-8C45-4E2D-8989-7BDC93B9ED70" dmnElementRef="_7334953C-8C45-4E2D-8989-7BDC93B9ED70" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="428" y="112" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_C37D0682-8B31-4EF5-92F9-2ED125C740B1-AUTO-TARGET" dmnElementRef="_C37D0682-8B31-4EF5-92F9-2ED125C740B1">
+        <di:waypoint x="478" y="305"/>
+        <di:waypoint x="478" y="162"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
